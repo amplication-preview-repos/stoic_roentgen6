@@ -30,3 +30,20 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Account {
+  attempts       Int?
+  billingid      String?
+  billingusers   String?
+  createdAt      DateTime  @default(now())
+  createdDate    DateTime?
+  credits        Int?
+  email          String?
+  id             String    @id @default(cuid())
+  info           String?
+  lastUpdateDate DateTime?
+  password       String?
+  recovery       String?
+  status         String?
+  updatedAt      DateTime  @updatedAt
+}
